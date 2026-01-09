@@ -202,79 +202,8 @@ const App: React.FC = () => {
       {/* Charts and Reasoning Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Performance Visualization */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2">
           <PerformanceChart data={timeSeries} />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Efficiency Box */}
-            <div className="glass p-5 rounded-xl">
-              <h3 className="text-xs font-bold text-slate-400 mb-4 flex items-center gap-2">
-                <Gauge className="w-4 h-4 text-cyan-400" />
-                LATENCY DISTRIBUTION
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex-1">
-                    <div className="flex justify-between text-[10px] mb-1">
-                      <span className="text-slate-500 uppercase">Network I/O</span>
-                      <span className="text-cyan-400 mono">{performance.latencies.network}ms</span>
-                    </div>
-                    <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
-                      <div className="bg-cyan-500 h-full" style={{ width: '15%' }}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1">
-                    <div className="flex justify-between text-[10px] mb-1">
-                      <span className="text-slate-500 uppercase">AI Reasoning</span>
-                      <span className="text-indigo-400 mono">{performance.latencies.thinking}ms</span>
-                    </div>
-                    <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
-                      <div className="bg-indigo-500 h-full" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1">
-                    <div className="flex justify-between text-[10px] mb-1">
-                      <span className="text-slate-500 uppercase">Local File I/O</span>
-                      <span className="text-emerald-400 mono">{performance.latencies.io}ms</span>
-                    </div>
-                    <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
-                      <div className="bg-emerald-500 h-full" style={{ width: '10%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Quality/Health Box */}
-            <div className="glass p-5 rounded-xl">
-              <h3 className="text-xs font-bold text-slate-400 mb-4 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                REPAIR & INTEGRITY
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
-                  <span className="text-[10px] text-slate-500 uppercase block mb-1">Self-Heal</span>
-                  <span className="text-lg font-bold mono text-emerald-400">{health.selfHealRate}%</span>
-                </div>
-                <div className="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
-                  <span className="text-[10px] text-slate-500 uppercase block mb-1">Diff Ratio</span>
-                  <span className="text-lg font-bold mono text-amber-400">{health.codeDiffRatio}x</span>
-                </div>
-                <div className="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
-                  <span className="text-[10px] text-slate-500 uppercase block mb-1">Lint Fixed</span>
-                  <span className="text-lg font-bold mono text-cyan-400">{health.lintFixes}</span>
-                </div>
-                <div className="p-3 bg-slate-900/50 rounded-lg border border-slate-800">
-                  <span className="text-[10px] text-slate-500 uppercase block mb-1">Active Errs</span>
-                  <span className="text-lg font-bold mono text-rose-400">{health.activeErrors}</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Right Sidebar - Thought Stream */}
