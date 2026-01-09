@@ -1,0 +1,5 @@
+{
+  "name": "Aiden Monitoring Engine",
+  "description": "High-performance data monitoring dashboard for Gemini CLI, tracking token consumption, reasoning logic, and real-time performance metrics.",
+  "requestFramePermissions": []
+}
