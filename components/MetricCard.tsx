@@ -28,7 +28,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
       </div>
       {trend && (
         <div className={`text-[10px] mt-2 font-bold flex items-center gap-1 ${trend.isUp ? 'text-emerald-400' : 'text-rose-400'}`}>
-          {trend.isUp ? '↑' : '↓'} {trend.value}% <span className="text-slate-500 font-normal">vs last task</span>
+          {trend.isUp ? '↑' : '↓'} {trend.value}% <span className="text-slate-500 font-normal lowercase">vs yesterday</span>
         </div>
       )}
     </div>
